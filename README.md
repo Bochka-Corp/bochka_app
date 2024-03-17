@@ -17,7 +17,7 @@
 
 [Github Projects](https://github.com/orgs/Bochka-Corp/projects/1)  
 [Miro - пользовательские сценарии](https://miro.com/app/board/uXjVNhT6kFE=/)  
-[Miro - диаграммы](https://miro.com/app/board/uXjVNhT6kFE=/)  
+[Miro - диаграммы](https://miro.com/app/board/uXjVNkFz-B8=/)  
 
 # Документация
 
