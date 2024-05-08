@@ -43,6 +43,10 @@
 [(pptx)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pptx)
 [(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pdf)
 
+Курсовая работа
+[(docx)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/Курсовая работа.docx)
+[(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/Курсовая работа.pdf)
+
 Перечень задач
 [(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87.pdf)
 
