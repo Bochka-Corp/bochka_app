@@ -24,7 +24,7 @@
 
 [Miro - пользовательские сценарии](https://miro.com/app/board/uXjVNhT6kFE=/)
 
-[Miro - диаграммы](https://miro.com/app/board/uXjVNhT6kFE=/)
+[Miro - диаграммы](https://miro.com/app/board/uXjVNkFz-B8=/)
 
 [Figma - дизайн](https://www.figma.com/file/wmPVnpXnWsZx5YqeRwW3FU/Bochka-design?type=design&node-id=0%3A1&mode=design&t=kPg1I5D97VQoQo5e-1)
 
@@ -40,12 +40,12 @@
 [(Docx)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/%D0%A1%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE.pdf)
 
 Презентация
-[(pptx)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pptx)
-[(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pdf)
+[(pptx)](https://github.com/Bochka-Corp/bochka_app/blob/d95309119d9122094628e191e8092c83dc7974d8/docs/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pptx)
+[(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/d95309119d9122094628e191e8092c83dc7974d8/docs/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pdf)
 
 Курсовая работа
-[(docx)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/Курсовая работа.docx)
-[(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/Курсовая работа.pdf)
+[(docx)](https://github.com/Bochka-Corp/bochka_app/blob/d95309119d9122094628e191e8092c83dc7974d8/docs/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.docx)
+[(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/d95309119d9122094628e191e8092c83dc7974d8/docs/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.pdf)
 
 Перечень задач
 [(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87.pdf)
