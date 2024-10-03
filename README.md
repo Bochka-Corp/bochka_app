@@ -12,6 +12,10 @@
 
 Веб-приложение "Бочка". Сервис букинга отелей
 
+### Развернутый проект:
+
+[Bochka](https://bochka-corp-bochka-app-client-8917.twc1.net/)
+
 ### Репозитории:
 
 [Client Repo](https://github.com/Bochka-Corp/bochka_app_client)
