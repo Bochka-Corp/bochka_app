@@ -27,10 +27,9 @@ services:
     ports:
       - '8080:8080'
 
-  # # FRONT
-  # front:
-  #   container_name: bochka-front
-  #   build: ./front
-  #   ports:
-  #     - '3000:3000'
-  #  
+  # FRONT
+  front:
+    container_name: bochka-front
+    build: ./front
+    ports:
+      - '3000:3000'
