@@ -78,7 +78,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'http://localhost:8080',
+  baseUrl: 'http://176.124.200.228:8080',
 });
 
 export default api;

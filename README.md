@@ -14,7 +14,7 @@
 
 ### Развернутый проект:
 
-[Bochka](https://bochka-corp-bochka-app-client-8917.twc1.net/)
+[Bochka](http://bochka-booking.ru/)
 
 ### Репозитории:
 
