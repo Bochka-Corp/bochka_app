@@ -1,0 +1,151 @@
+.hotel-card {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #EDEDEDFF;
+  transition: 0.3s;
+  color: #212a34;
+  text-decoration: none;
+  height: 200px;
+}
+
+.hotel-card:hover {
+  box-shadow: 0 0 0 3px #3CB371;
+}
+
+.hotel-card__carousel {
+  width: 28%;
+}
+
+.hotel-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotel-card__container {
+  display: flex;
+  width: 72%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.hotel-card__info-main {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hotel-card__title {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+  color: #3CB371;
+}
+
+.hotel-card__reviews {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hotel-card__review {
+  box-sizing: border-box;
+  padding: 3px 7px;
+  background-color: #3CB371;
+  border-radius: 5px;
+}
+
+.hotel-card__info-location {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hotel-card__location {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.hotel-card__info-advantages {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hotel-card__star {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.hotel-card__star-icon {
+  fill: #3CB371;
+  width: 24px;
+  height: 24px;
+  padding-bottom: 2px;
+}
+
+.hotel-card__icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.hotel-card__icon {
+  width: 40px;
+  height: 40px;
+  fill: #3CB371;
+}
+
+.hotel-card__info-price {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+.hotel-card__like {
+  display: flex;
+  justify-content: end;
+}
+
+.hotel-card__like-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hotel-card__like-btn:hover {
+  opacity: 0.6;
+}
+
+.hotel-card__like-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.hotel-card__price-text {
+  box-sizing: border-box;
+  padding-top: 5px;
+  font-weight: 500;
+}
+
+.hotel-card__price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 20px;
+}

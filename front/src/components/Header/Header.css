@@ -1,0 +1,96 @@
+.header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.header__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 15px 20px 15px 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #3CB371;
+}
+
+.header__container_main {
+  padding: 30px 70px 0 70px;
+  background: none;
+  color: #fff;
+}
+
+.header__logo {
+  margin-left: 5px;
+  width: 227px;
+  height: 41px;
+}
+
+.header__logo_green {
+  background: url("../../assets/images/logo_green.svg") no-repeat;
+}
+
+.header__logo_white {
+  background: url("../../assets/images/logo_white.svg") no-repeat;
+  cursor: default;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #3CB371;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 50px;
+  transition: 1s;
+}
+
+.header__buttons_user {
+  display: flex;
+  gap: 30px;
+}
+
+.header__button {
+  background: #3CB371;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.header__button:hover {
+  background: rgb(37, 110, 69);
+}
+
+.header__link {
+  text-decoration: none;
+  background: #3CB371;
+  color: #fff;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 8px;
+  max-height: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header__link:hover {
+  background: rgb(37, 110, 69);
+}
+
+.header__icon {
+  background: url("../../assets/images/auth_icon.svg") no-repeat center #3CB371;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.header__buttons:hover {
+  width: 440px;
+}

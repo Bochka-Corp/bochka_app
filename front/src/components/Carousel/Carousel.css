@@ -1,0 +1,43 @@
+.carousel {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel__wallpapers {
+  display: flex;
+  position: absolute;
+}
+
+.carousel__text {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 300;
+  position: absolute;
+  right: calc(50% - 600px);
+  bottom: 50px;
+}
+
+.carousel__search {
+  position: absolute;
+  left: calc(50% - 410px);
+  top: 50%;
+}
+
+.carousel__tagline {
+  margin: 0;
+  padding-bottom: 30px;
+  font-size: 25px;
+  position: relative;
+}
+
+.carousel__tagline::before {
+  content: '';
+  background: url("../../assets/images/decoration.svg");
+  position: absolute;
+  top: -35px;
+  left: 0;
+  width: 84px;
+  height: 18px;
+}

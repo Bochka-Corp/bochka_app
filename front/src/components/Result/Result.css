@@ -1,0 +1,63 @@
+.result {
+  color: #212a34;
+}
+
+.result__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 80px 20px 0 20px;
+  display: flex;
+}
+
+.result__content {
+  width: 60%;
+  box-sizing: border-box;
+  padding-right: 15px;
+}
+
+.result__map-content {
+  width: 40%;
+  height: calc(100vh - 95px);
+  position: sticky;
+  top: 80px;
+}
+
+.result__map {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.result__filters {
+  display: flex;
+  box-sizing: border-box;
+  padding: 15px 0;
+  gap: 20px;
+}
+
+.result__filter-button {
+  border-radius: 8px;
+  border: none;
+  background: #3CB371;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.result__filter-button:hover {
+  background: rgb(37, 110, 69);
+}
+
+.result__hotel-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  box-sizing: border-box;
+  padding: 0 0 20px 0;
+}

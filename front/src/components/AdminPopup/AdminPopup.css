@@ -1,0 +1,188 @@
+.admin-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(60, 179, 113, 0.6);
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.admin-popup_active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.admin-popup__container {
+  height: 90vh;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 50px 70px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.admin-popup__title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.admin-popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0;
+  overflow: scroll;
+}
+
+.admin-popup__subtitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.admin-popup__row {
+  display: flex;
+  gap: 20px;
+}
+
+.admin-popup__label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 2px;
+}
+
+.admin-popup__input {
+  min-width: 300px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #212a34;
+  background: none;
+  transition: 0.2s;
+}
+
+.admin-popup__input:focus {
+  outline: none;
+  border: 1px solid #3CB371;
+}
+
+.admin-popup__input_textarea {
+  font-size: 14px;
+  resize: none;
+  height: 100px;
+}
+
+.admin-popup__facilities {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 650px;
+  row-gap: 10px;
+}
+
+.admin-popup__facility {
+  width: 50%;
+}
+
+.admin-popup__label_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-popup__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.admin-popup__checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.admin-popup__checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-popup__checkbox:checked+label::before {
+  border-color: #3CB371;
+  background-color: #3CB371;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.admin-popup__checkbox:not(:checked)+label:hover::before {
+  border-color: #3CB371;
+}
+
+.admin-popup__room {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0 0;
+  gap: 10px;
+  background-color: #EDEDEDFF;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.admin-popup__button {
+  width: fit-content;
+  align-self: center;
+  border: none;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #3CB371;
+  border-radius: 10px;
+  padding: 10px 35px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-popup__button:hover {
+  background: rgb(37, 110, 69);
+}
+
+.admin-popup__button-close {
+  position: absolute;
+  background: url("../../assets/images/close-button.svg") transparent center center no-repeat;
+  border: none;
+  width: 32px;
+  height: 32px;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.admin-popup__button-close:hover {
+  opacity: 0.6;
+}
