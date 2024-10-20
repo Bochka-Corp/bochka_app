@@ -21,5 +21,6 @@
 @import url("./components/Bookings/Bookings.css");
 @import url("./components/BookingCard/BookingCard.css");
 @import url("./components/AdminPanel/AdminPanel.css");
-@import url("./components/AdminPopup/AdminPopup.css");
+@import url("components/AdminHotelPopup/AdminHotelPopup.css");
+@import url("./components/AdminRoomPopup/AdminRoomPopup.css");
 @import url("./components/AdminCard/AdminCard.css");

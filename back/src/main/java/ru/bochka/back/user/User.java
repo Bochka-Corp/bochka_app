@@ -29,6 +29,5 @@ public class User {
 
     @Column(name = "password")
     @NotEmpty
-    @Size(max = 50, min = 1)
     private String password;
 }

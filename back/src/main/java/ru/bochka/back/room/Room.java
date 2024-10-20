@@ -5,11 +5,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import org.hibernate.annotations.Where;
 import ru.bochka.back.hotel.Hotel;
-import ru.bochka.back.photo.Photo;
-
-import java.util.List;
 
 @Entity
 @Table(name = "rooms")
@@ -60,7 +56,6 @@ public class Room {
     @Column(name = "is_tv")
     private Boolean isTV;
 
-    @OneToMany(mappedBy = "room")
-    @Where(clause = "hotel_id is null")
-    private List<Photo> photos;
+    @Column(name = "photo_url")
+    private String photoUrl;
 }

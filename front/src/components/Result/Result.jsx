@@ -53,31 +53,35 @@ function Result() {
           </div>
         </div>
         <div className="result__map-content">
-          <YMaps>
-            <Map className="result__map" defaultState={{ center: [55.75, 37.57], zoom: 10 }}>
-              <Clusterer
-                options={{
-                  preset: 'islands#darkGreenClusterIcons',
-                  groupByCoordinates: false,
-                }}
-              >
-                {
-                  hotels.map((hotel) => (
-                    <Placemark
-                      key={hotel.id}
-                      geometry={[hotel.latitude, hotel.longitude]}
-                      options={
-                        {
-                          preset: 'islands#circleDotIcon',
-                          iconColor: '#3CB371',
-                        }
-                      }
-                    />
-                  ))
-                }
-              </Clusterer>
-            </Map>
-          </YMaps>
+          {
+            hotels.length > 0 && (
+              <YMaps>
+                <Map className="result__map" defaultState={{ center: [hotels[0].latitude, hotels[0].longitude], zoom: 10 }}>
+                  <Clusterer
+                    options={{
+                      preset: 'islands#darkGreenClusterIcons',
+                      groupByCoordinates: false,
+                    }}
+                  >
+                    {
+                      hotels.map((hotel) => (
+                        <Placemark
+                          key={hotel.id}
+                          geometry={[hotel.latitude, hotel.longitude]}
+                          options={
+                            {
+                              preset: 'islands#circleDotIcon',
+                              iconColor: '#3CB371',
+                            }
+                          }
+                        />
+                      ))
+                    }
+                  </Clusterer>
+                </Map>
+              </YMaps>
+            )
+          }
         </div>
       </div>
     </main>

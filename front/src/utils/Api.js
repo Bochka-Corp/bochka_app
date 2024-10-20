@@ -26,6 +26,7 @@ class Api {
     return axios.get(`${this._baseUrl}/hotels`, {
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
       },
     })
       .then((res) => this._checkResponse(res));
@@ -35,6 +36,7 @@ class Api {
     return axios.get(`${this._baseUrl}/hotels/city/${city}`, {
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
       },
     })
       .then((res) => this._checkResponse(res));
@@ -44,6 +46,27 @@ class Api {
     return axios.get(`${this._baseUrl}/hotels/${id}`, {
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
+      },
+    })
+      .then((res) => this._checkResponse(res));
+  }
+
+  createHotel(hotel) {
+    return axios.post(`${this._baseUrl}/hotels`, hotel, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
+      },
+    })
+      .then((res) => this._checkResponse(res));
+  }
+
+  deleteHotel(id) {
+    return axios.delete(`${this._baseUrl}/hotels/${id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
       },
     })
       .then((res) => this._checkResponse(res));
@@ -53,6 +76,27 @@ class Api {
     return axios.get(`${this._baseUrl}/rooms/${id}`, {
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
+      },
+    })
+      .then((res) => this._checkResponse(res));
+  }
+
+  createRoom(room) {
+    return axios.post(`${this._baseUrl}/rooms`, room, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
+      },
+    })
+      .then((res) => this._checkResponse(res));
+  }
+
+  deleteRoom(id) {
+    return axios.delete(`${this._baseUrl}/rooms/${id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
       },
     })
       .then((res) => this._checkResponse(res));
@@ -62,6 +106,7 @@ class Api {
     return axios.get(`${this._baseUrl}/bookings`, {
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
       },
     })
       .then((res) => this._checkResponse(res));
@@ -71,9 +116,40 @@ class Api {
     return axios.post(`${this._baseUrl}/bookings`, booking, {
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
       },
     })
       .then((res) => this._checkResponse(res));
+  }
+
+  getAllCities() {
+    return axios.get(`${this._baseUrl}/cities`, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${localStorage.getItem('userEmail')}:${localStorage.getItem('userPassword')}`)}`,
+      },
+    })
+      .then((res) => this._checkResponse(res));
+  }
+
+  register(userData) {
+    return axios.post(`${this._baseUrl}/api/auth/register`, userData, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((res) => this._checkResponse(res))
+      .catch((res) => Promise.reject(res.response.data));
+  }
+
+  login(userData) {
+    return axios.post(`${this._baseUrl}/api/auth/login`, userData, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((res) => this._checkResponse(res))
+      .catch((res) => Promise.reject(res.response.data));
   }
 }
 

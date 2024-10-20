@@ -5,9 +5,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import org.hibernate.annotations.Where;
 import ru.bochka.back.city.City;
-import ru.bochka.back.photo.Photo;
 import ru.bochka.back.room.Room;
 
 import java.util.List;
@@ -53,7 +51,15 @@ public class Hotel {
     @OneToMany(mappedBy = "hotel")
     private List<Room> rooms;
 
-    @OneToMany(mappedBy = "hotel")
-    @Where(clause = "room_id is null")
-    private List<Photo> photos;
+    @Column(name = "photo_url")
+    private String photoUrl;
+
+    @Column(name = "review_count")
+    private Integer reviewCount;
+
+    @Column(name = "rating")
+    private Float rating;
+
+    @Column(name = "distance")
+    private Float distance;
 }

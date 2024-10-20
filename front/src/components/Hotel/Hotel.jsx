@@ -14,7 +14,7 @@ function Hotel() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const [hotel, setHotel] = useState({ photos: [], rooms: [], description: '' });
+  const [hotel, setHotel] = useState({ photoUrl: '', rooms: [], description: '' });
   const [isLoad, setIsLoad] = useState(false);
 
   const [positionStyle, setPositionStyle] = useState({});
@@ -109,7 +109,7 @@ function Hotel() {
                       strokeWidth="1.25"
                     />
                   </svg>
-                  5
+                  {hotel.distance}
                   {' '}
                   км до центра
                 </p>
@@ -132,7 +132,7 @@ function Hotel() {
                   </svg>
                 </div>
                 <div className="hotel__review">
-                  5
+                  {hotel.rating}
                 </div>
               </div>
             </div>
@@ -145,10 +145,10 @@ function Hotel() {
                 <div className="hotel__gallery-container">
                   <div className="hotel__gallery-images" style={positionStyle}>
                     {
-                      hotel.photos.map((image) => (
+                      hotel.photoUrl.split(' ').map((image, index) => (
                         <HotelImage
-                          image={image.url}
-                          key={image.id}
+                          image={image}
+                          key={image + index}
                         />
                       ))
                      }
@@ -177,7 +177,7 @@ function Hotel() {
                   <button
                     type="button"
                     className="hotel__gallery-btn hotel__gallery-btn_right"
-                    disabled={hotel.photos.length - 1 === position}
+                    disabled={hotel.photoUrl.split(' ').length - 1 === position}
                     onClick={handleClickNext}
                   >
                     <svg

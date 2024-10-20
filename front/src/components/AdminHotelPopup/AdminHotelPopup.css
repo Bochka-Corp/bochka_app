@@ -57,6 +57,7 @@
 }
 
 .admin-popup__label {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -77,6 +78,41 @@
 .admin-popup__input:focus {
   outline: none;
   border: 1px solid #3CB371;
+}
+
+.admin-popup__suggestions {
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  visibility: hidden;
+  display: none;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-bottom: 1px solid #3CB371;
+  border-left: 1px solid #3CB371;
+  border-right: 1px solid #3CB371;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.admin-popup__suggestions_active {
+  display: flex;
+  visibility: visible;
+}
+
+.admin-popup__suggestion {
+  background: #fff;
+  border: none;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-popup__suggestion:hover {
+  color: #3bb371;
 }
 
 .admin-popup__input_textarea {

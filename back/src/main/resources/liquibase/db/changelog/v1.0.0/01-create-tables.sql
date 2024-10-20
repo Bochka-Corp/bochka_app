@@ -1,7 +1,7 @@
 --liquibase formatted sql
 
 --changeset id:1
-drop table if exists users, cities, hotels, rooms, bookings, photos cascade;
+drop table if exists users, cities, hotels, rooms, bookings cascade;
 
 --changeset id:2
 create table if not exists users
@@ -9,7 +9,7 @@ create table if not exists users
     id       bigint generated always as identity primary key,
     name     varchar(50) not null,
     email    varchar(50) not null,
-    password varchar(50) not null
+    password varchar not null
 );
 
 --changeset id:3
@@ -30,7 +30,11 @@ create table if not exists hotels
     address      varchar(150) not null,
     latitude     float,
     longitude    float,
-    pet_friendly boolean
+    pet_friendly boolean,
+    review_count int,
+    rating       float,
+    distance     float,
+    photo_url varchar
 );
 
 --changeset id:5
@@ -48,7 +52,8 @@ create table if not exists rooms
     is_conditioner   boolean,
     is_wi_fi         boolean,
     is_shower        boolean,
-    is_tv            boolean
+    is_tv            boolean,
+    photo_url varchar
 );
 
 --changeset id:6
@@ -61,13 +66,4 @@ create table if not exists bookings
     start_date  date,
     finish_date date,
     created     timestamp
-);
-
---changeset id:7
-create table if not exists photos
-(
-    id        bigint generated always as identity primary key,
-    hotel_id  bigint references hotels (id) on delete cascade,
-    room_id   bigint references rooms (id) on delete cascade,
-    photo_url varchar
 );

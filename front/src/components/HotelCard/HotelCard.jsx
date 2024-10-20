@@ -6,7 +6,7 @@ function HotelCard({ data }) {
   return (
     <Link to={`/hotel/${data.id}`} className="hotel-card">
       <div className="hotel-card__carousel">
-        <img src={data.photos[0].url} alt={data.name} className="hotel-card__img" />
+        <img src={data.photoUrl.split(' ')[0]} alt={data.name} className="hotel-card__img" />
       </div>
       <div className="hotel-card__container">
         <div className="hotel-card__info-main">
@@ -15,10 +15,10 @@ function HotelCard({ data }) {
           </h2>
           <div className="hotel-card__reviews">
             <span className="hotel-card__review">
-              5
+              {data.rating}
             </span>
             {' '}
-            1000
+            {data.reviewCount}
             {' '}
             отзывов
           </div>
@@ -45,7 +45,7 @@ function HotelCard({ data }) {
                   strokeWidth="1.25"
                 />
               </svg>
-              5
+              {data.distance}
               {' '}
               км до центра
             </div>
@@ -108,7 +108,7 @@ function HotelCard({ data }) {
           <div className="hotel-card__price">
             от
             {' '}
-            {data.rooms[0].price * Number(sessionStorage.getItem('days'))}
+            {data.rooms[0]?.price * Number(sessionStorage.getItem('days'))}
             {' '}
             <svg
               fill="#3CB371"
@@ -129,7 +129,7 @@ function HotelCard({ data }) {
           <div className="hotel-card__price">
             от
             {' '}
-            {data.rooms[0].price}
+            {data.rooms[0]?.price}
             {' '}
             <svg
               fill="#3CB371"

@@ -4,7 +4,7 @@ function BookingCard({ booking }) {
   return (
     <div className="booking-card">
       <div className="booking-card__carousel">
-        <img src={booking.hotel.photos[0].url} alt="отель" className="booking-card__img" />
+        <img src={booking.hotel.photoUrl.split(' ')[0]} alt="отель" className="booking-card__img" />
       </div>
       <div className="booking-card__container">
         <div className="booking-card__info-main">

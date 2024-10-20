@@ -1,18 +1,23 @@
 import React from 'react';
 import petImage from '../../assets/images/Cat.svg';
 import RoomCard from '../RoomCard/RoomCard.jsx';
+import api from '../../utils/Api.js';
 
-function AdminCard({ hotel }) {
+function AdminCard({
+  hotel, handleDeleteHotel, handleDeleteRoom, handleOpenPopup,
+}) {
   return (
     <div className="admin-card">
       <div className="admin-card__container">
         <div className="admin-card__images">
-          <img className="admin-card__image" src={hotel?.photos[0].url} alt="отель" />
+          <img className="admin-card__image" src={hotel?.photoUrl.split(' ')[0]} alt="отель" />
         </div>
         <div className="admin-card__info">
           <div className="admin-card__header">
             <h2 className="admin-card__title">
               {hotel.name}
+              {' '}
+              {hotel.stars}
               <svg
                 version="1.1"
                 viewBox="0 0 36 36"
@@ -31,9 +36,11 @@ function AdminCard({ hotel }) {
             </h2>
             <div className="admin-card__reviews">
               <span className="admin-card__review">
-                5
+                {hotel.rating}
               </span>
-              1000 отзывов
+              {hotel.reviewCount}
+              {' '}
+              отзывов
             </div>
           </div>
           <div className="admin-card__row">
@@ -61,7 +68,9 @@ function AdminCard({ hotel }) {
                       strokeWidth="1.25"
                     />
                   </svg>
-                  5 км до центра
+                  {hotel.distance}
+                  {' '}
+                  км до центра
                 </div>
               </div>
             </div>
@@ -83,9 +92,17 @@ function AdminCard({ hotel }) {
       <div className="admin-card__rooms">
         {
           hotel.rooms.map((room) => (
-            <RoomCard admin data={room} key={room.id} />
+            <RoomCard admin handleDeleteRoom={handleDeleteRoom} data={room} key={room.id} />
           ))
         }
+        <div className="admin-card__buttons">
+          <button type="button" onClick={() => handleDeleteHotel(hotel.id)} className="admin-card__button admin-card__button_delete">
+            Удалить отель
+          </button>
+          <button type="button" onClick={() => handleOpenPopup(hotel.id)} className="admin-card__button">
+            Добавить номер
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import wifiImage from '../../assets/images/wifi.svg';
 import bathImage from '../../assets/images/Bath.svg';
 import displayImage from '../../assets/images/Display.svg';
 
-function RoomCard({ data, admin }) {
+function RoomCard({ data, handleDeleteRoom, admin }) {
   const { id } = useParams();
 
   const [positionStyle, setPositionStyle] = useState({});
@@ -29,10 +29,10 @@ function RoomCard({ data, admin }) {
       <div className="room-card__gallery">
         <div className="room-card__images" style={positionStyle}>
           {
-            data.photos.map((image) => (
+            data.photoUrl.split(' ').map((image, index) => (
               <RoomImage
-                image={image.url}
-                key={image.id}
+                image={image}
+                key={image + index}
               />
             ))
           }
@@ -61,7 +61,7 @@ function RoomCard({ data, admin }) {
         <button
           type="button"
           className="room-card__gallery-btn room-card__gallery-btn_right"
-          disabled={data.photos.length - 1 === position}
+          disabled={data.photoUrl.split(' ').length - 1 === position}
           onClick={handleClickNext}
         >
           <svg
@@ -142,6 +142,9 @@ function RoomCard({ data, admin }) {
                 </p>
                 цена за сутки
               </div>
+              <button type="button" onClick={() => handleDeleteRoom(data.id)} className="room-card__link room-card__link_delete">
+                Удалить комнату
+              </button>
             </div>
           ) : (
             <div className="room-card__booking">

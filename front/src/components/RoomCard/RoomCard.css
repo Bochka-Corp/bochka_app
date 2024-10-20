@@ -128,3 +128,13 @@
   background: rgb(37, 110, 69);
 }
 
+.room-card__link_delete {
+  cursor: pointer;
+  background-color: #ff3c3c;
+  border: none;
+}
+
+.room-card__link_delete:hover {
+  background-color: #9a2525;
+}
+

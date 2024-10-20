@@ -7,7 +7,7 @@ function Header({ main }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    setIsLoggedIn(sessionStorage.getItem('isLoggedIn'));
+    setIsLoggedIn(localStorage.getItem('isLoggedIn'));
   }, [location]);
 
   return (
@@ -18,7 +18,7 @@ function Header({ main }) {
           isLoggedIn ? (
             <div className="header__buttons_user">
               {
-                location.pathname !== '/bookings' && (
+                location.pathname !== '/bookings' && location.pathname !== '/admin' && (
                   <Link to="/bookings" className="header__button">
                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path

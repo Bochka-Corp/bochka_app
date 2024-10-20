@@ -1,22 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header.jsx';
-import AdminPopup from '../AdminPopup/AdminPopup.jsx';
+import AdminHotelPopup from '../AdminHotelPopup/AdminHotelPopup.jsx';
 import AdminCard from '../AdminCard/AdminCard.jsx';
 import api from '../../utils/Api.js';
+import AdminRoomPopup from '../AdminRoomPopup/AdminRoomPopup.jsx';
 
 function AdminPanel() {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isHotelPopupOpen, setIsHotelPopupOpen] = useState(false);
+  const [isRoomPopupOpen, setIsRoomPopupOpen] = useState(false);
+  const [selectedHotel, setSelectedHotel] = useState('');
 
   const [hotels, setHotels] = useState([]);
 
   function handleAddButtonClick() {
-    setIsPopupOpen(true);
+    setIsHotelPopupOpen(true);
+  }
+
+  function handleAddRoomButtonClick(hotelId) {
+    setIsRoomPopupOpen(true);
+    setSelectedHotel(hotelId);
+  }
+
+  function handleDeleteHotel(id) {
+    api.deleteHotel(id)
+      .then(() => setHotels(hotels.filter((el) => el.id !== id)));
+  }
+
+  function handleDeleteRoom(id) {
+    api.deleteRoom(id)
+      .then(() => api.getAllHotels()
+        .then((res) => setHotels(res)));
   }
 
   useEffect(() => {
     api.getAllHotels()
       .then((res) => setHotels(res));
-  }, []);
+  }, [isHotelPopupOpen, isRoomPopupOpen]);
 
   return (
     <section className="admin-panel">
@@ -33,12 +52,15 @@ function AdminPanel() {
         <div className="admin-panel__content">
           {
             hotels.map((hotel) => (
-              <AdminCard hotel={hotel} key={hotel.id} />
+              // eslint-disable-next-line max-len
+              <AdminCard hotel={hotel} handleDeleteHotel={handleDeleteHotel} handleDeleteRoom={handleDeleteRoom} handleOpenPopup={handleAddRoomButtonClick} key={hotel.id} />
             ))
           }
         </div>
       </div>
-      <AdminPopup isOpen={isPopupOpen} setIsOpen={setIsPopupOpen} />
+      <AdminHotelPopup isOpen={isHotelPopupOpen} setIsOpen={setIsHotelPopupOpen} />
+      {/* eslint-disable-next-line max-len */}
+      <AdminRoomPopup isOpen={isRoomPopupOpen} setIsOpen={setIsRoomPopupOpen} hotel={selectedHotel} setHotel={setSelectedHotel} />
     </section>
   );
 }

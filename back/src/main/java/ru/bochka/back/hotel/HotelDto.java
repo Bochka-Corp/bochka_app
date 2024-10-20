@@ -6,7 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.bochka.back.city.City;
-import ru.bochka.back.photo.PhotoDto;
 import ru.bochka.back.room.RoomDtoForHotel;
 
 import java.util.List;
@@ -37,5 +36,11 @@ public class HotelDto {
 
     private List<RoomDtoForHotel> rooms;
 
-    private List<PhotoDto> photos;
+    private String photoUrl;
+
+    private Integer reviewCount;
+
+    private Float rating;
+
+    private Float distance;
 }

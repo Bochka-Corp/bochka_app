@@ -9,7 +9,7 @@ function Booking() {
   const { hotelId, roomId } = useParams();
 
   const [hotel, setHotel] = useState({ photos: [] });
-  const [room, setRoom] = useState({ photos: [{ url: '' }] });
+  const [room, setRoom] = useState({ photoUrl: '' });
 
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
@@ -177,7 +177,7 @@ function Booking() {
                   </div>
                 </div>
                 <div className="booking__gallery">
-                  <img src={room.photos[0].url} alt="фото номера" className="booking__image" />
+                  <img src={room.photoUrl.split(' ')[0]} alt="фото номера" className="booking__image" />
                 </div>
               </div>
 

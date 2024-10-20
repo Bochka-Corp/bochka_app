@@ -5,10 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.bochka.back.hotel.HotelDto;
-import ru.bochka.back.photo.PhotoDto;
-
-import java.util.List;
 
 @Data
 @Schema(name = "RoomDtoForHotel", description = "DTO for Rooms for Hotel")
@@ -40,5 +36,5 @@ public class RoomDtoForHotel {
 
     private Boolean isTV;
 
-    private List<PhotoDto> photos;
+    private String photoUrl;
 }

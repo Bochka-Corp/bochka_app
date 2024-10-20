@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import {
+  Navigate, Route, Routes, useLocation,
+} from 'react-router-dom';
 import Main from '../Main/Main.jsx';
 import Login from '../Login/Login.jsx';
 import Register from '../Register/Register.jsx';
@@ -20,18 +22,42 @@ function App() {
 
   return (
     <div className="app">
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/admin" element={<AdminPanel />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/bookings" element={<Bookings />} />
-        <Route path="/search/:city" element={<Result />} />
-        <Route path="/hotel/:id" element={<Hotel />} />
-        <Route path="/hotel/:hotelId/room/:roomId/booking" element={<Booking />} />
-        <Route path="/*" element={<NotFound />} />
-      </Routes>
+      {
+        localStorage.getItem('isLoggedIn') ? (
+          (
+            <Routes>
+              {
+                localStorage.getItem('isAdmin') ? (
+                  <>
+                    <Route path="/admin" element={<AdminPanel />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/*" element={<Navigate to="/admin" replace />} />
+                  </>
+                ) : (
+                  <>
+                    <Route path="/" element={<Main />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/bookings" element={<Bookings />} />
+                    <Route path="/search/:city" element={<Result />} />
+                    <Route path="/hotel/:id" element={<Hotel />} />
+                    <Route path="/hotel/:hotelId/room/:roomId/booking" element={<Booking />} />
+                    <Route path="/*" element={<NotFound />} />
+                  </>
+                )
+              }
+            </Routes>
+          )
+        ) : (
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route
+              path="*"
+              element={<Navigate to="/login" replace />}
+            />
+          </Routes>
+        )
+      }
     </div>
   );
 }

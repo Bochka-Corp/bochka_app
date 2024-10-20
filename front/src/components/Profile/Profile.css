@@ -14,3 +14,19 @@
 .profile__text_highlighted {
   font-weight: 700;
 }
+
+.profile__button {
+  width: 100%;
+  font-size: 20px;
+  padding: 12px 0;
+  border-radius: 10px;
+  background: #7AD6A2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile__button:hover {
+  background: rgb(37, 110, 69);
+}

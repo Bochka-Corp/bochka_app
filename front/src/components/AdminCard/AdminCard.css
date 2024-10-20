@@ -102,3 +102,32 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.admin-card__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.admin-card__button {
+  width: 100%;
+  background-color: #3bb371;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-card__button:hover {
+  background-color: #256e45;
+}
+
+.admin-card__button_delete {
+  background-color: #ff3c3c;
+}
+
+.admin-card__button_delete:hover {
+  background-color: #9a2525;
+}
