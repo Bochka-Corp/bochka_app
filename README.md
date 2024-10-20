@@ -16,6 +16,12 @@
 
 [Bochka](http://bochka-booking.ru/)
 
+### Данные для тестового пользователя
+| Логин  | Пароль |
+| ------------- | ------------- |
+| admin@mail.ru (админ) | qwerty  |
+| alex@yandex.ru (клиент) | 123456  |
+
 ### Репозитории:
 
 [Client Repo](https://github.com/Bochka-Corp/bochka_app_client)
@@ -32,6 +38,10 @@
 
 [Figma - дизайн](https://www.figma.com/file/wmPVnpXnWsZx5YqeRwW3FU/Bochka-design?type=design&node-id=0%3A1&mode=design&t=kPg1I5D97VQoQo5e-1)
 
+## Презентации проекта
+
+[ТЗ видео (1 атт.)](https://vk.com/video305871474_456239680)  
+
 # Документация
 
 Техническое задание
@@ -42,7 +52,7 @@
 [(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/%D0%A1%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE.pdf)
 
 Сопроводительное пиьсмо (новое)
-[(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/ca2df0a1025a2a27de656d3269bba2c7a6f17b56/docs/%D0%A1%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE%20(%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5).pdf)
+[(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/f055186f4a2873a56e3e42328fa43f9c6bcd819c/docs/%D0%A1%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE%20(%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5).pdf)
 
 Презентация
 [(pptx)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pptx)
@@ -55,8 +65,9 @@
 Перечень задач
 [(pdf)](https://github.com/Bochka-Corp/bochka_app/blob/master/docs/%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87.pdf)
 
-## Презентации проекта
+## Видео
+[Видео с архитектурой backend](https://drive.google.com/file/d/1PtC9t2nUeMWP6vsb7xGwz6I0vxbUbumV/view?usp=drive_link)
 
-[ТЗ видео (1 атт.)](https://vk.com/video305871474_456239680)  
+[Видео с архитектурой frontend](https://drive.google.com/file/d/10pxjWT34EZH3Oe7QCi70FgIOIsL1hYZ1/view?usp=drive_link)
 
-
+[Видео с обзором работы приложения](https://drive.google.com/file/d/1g5PS5z1wbSaiYxBNQrg099l0U5IXf5k_/view?usp=drive_link)
